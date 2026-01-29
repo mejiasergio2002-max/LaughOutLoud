@@ -28,12 +28,19 @@ export default function Home() {
         </p>
 
         <div className="flex gap-4">
-          <Link
-            href="/room"
-            className="rounded-full bg-red-600 px-8 py-4 text-lg font-semibold text-white hover:bg-red-700 transition"
-          >
-            Enter the Club
-          </Link>
+       <Link
+  href="/register"
+  className="rounded-full bg-red-600 px-8 py-4 text-lg font-semibold text-white hover:bg-red-700 transition"
+>
+  Enter the Club
+</Link>
+
+<Link
+  href="/feed"
+  className="rounded-full border border-white px-8 py-4 text-lg text-white hover:bg-white/10 transition"
+>
+  Just Watching
+</Link>
 
           <button
             className="rounded-full border border-white px-8 py-4 text-lg text-white hover:bg-white/10 transition"
