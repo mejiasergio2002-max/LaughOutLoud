@@ -51,9 +51,11 @@ export default function FeedPage() {
             {/* VIDEO */}
             <video
               src={item.src}
-              controls
+              muted
               playsInline
-              className="w-full h-auto"
+              controls
+              preload="metadata"
+              className="w-full h-auto bg-black"
             />
 
             {/* INFO BAR */}
