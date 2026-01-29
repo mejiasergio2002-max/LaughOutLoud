@@ -12,34 +12,45 @@ export default function FeedPage() {
   const feed: FeedItem[] = [
     {
       id: 1,
-      title: "Crowd Work Madness",
+      title: "Crowd Work Set",
       comedian: "Shane",
       src: "/shane.mp4",
       live: true,
     },
     {
       id: 2,
-      title: "Relentless Punchlines",
+      title: "Fast Punchlines",
       comedian: "Hart",
       src: "/hart.mp4",
       live: true,
     },
+    {
+      id: 3,
+      title: "Storytelling Chaos",
+      comedian: "Theo",
+      src: "/theo.mp4",
+      live: false,
+    },
+    {
+      id: 4,
+      title: "Classic Crowd Killer",
+      comedian: "Jo Koy",
+      src: "/jokoy.mp4",
+      live: false,
+    },
   ];
 
   return (
-    <main className="min-h-screen bg-black text-white px-6 py-8">
-      <h1 className="text-3xl font-bold mb-8">
+    <main className="min-h-screen bg-black text-white px-6 py-10">
+      <h1 className="text-3xl font-bold mb-10">
         Comedy Feed
       </h1>
 
-      <section
-        className="grid gap-8"
-        style={{ gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))" }}
-      >
+      <section className="max-w-5xl mx-auto grid gap-10 md:grid-cols-2">
         {feed.map((item) => (
           <div
             key={item.id}
-            className="relative rounded-lg overflow-hidden bg-black border border-white/10"
+            className="relative rounded-lg overflow-hidden border border-white/10 bg-black"
           >
             {/* LIVE BADGE */}
             {item.live && (
@@ -51,11 +62,10 @@ export default function FeedPage() {
             {/* VIDEO */}
             <video
               src={item.src}
-              muted
-              playsInline
               controls
+              playsInline
               preload="metadata"
-              className="w-full h-auto bg-black"
+              className="w-full bg-black"
             />
 
             {/* INFO BAR */}
